@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity Management</title>
+    <link rel="stylesheet" href="activity_management.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+</head>
+<body>
+    <div class="sidebar">
+        <div>
+            <a href="announcements.html">Announcements</a>
+            <a href="usermanagement.html">User Management</a>
+            <a href="announcement_approval.html">Announcement Approval</a>
+            <a href="activity_management.html">Activity Management</a>
+            <a href="activity_approval.html">Activity Approval</a>
+            <a href="facility_management.html">Facility Management</a>
+            <a href="chinese_medicine_booking.html">Chinese Medicine Booking</a>
+            <a href="reports_statistics.html">Reports/Statistics</a>
+        </div>
+        <div class="user-info">
+            <p>User1</p>
+            <p>Publisher</p>
+        </div>
+    </div>
+    <div class="main-content">
+        <div class="container">
+            <h2>Create New Activity</h2>
+            <form id="activityForm">
+                <div class="form-group">
+                    <label for="activityDate">Date:</label>
+                    <input type="date" id="activityDate" name="activityDate" required>
+                </div>
+                <div class="form-group">
+                    <label for="activityTime">Time:</label>
+                    <input type="time" id="activityTime" name="activityTime" required>
+                </div>
+                <div class="form-group">
+                    <label for="activityDuration">Duration (hours):</label>
+                    <input type="number" id="activityDuration" name="activityDuration" required>
+                </div>
+                <div class="form-group">
+                    <label for="activityFee">Fee:</label>
+                    <input type="number" id="activityFee" name="activityFee" required>
+                </div>
+                <div class="form-group">
+                    <label for="activityMaxVisitors">Max Visitors:</label>
+                    <input type="number" id="activityMaxVisitors" name="activityMaxVisitors" required>
+                </div>
+                <div class="form-group">
+                    <label for="activityImage">Upload Image:</label>
+                    <input type="file" id="activityImage" name="activityImage" accept="image/*" required>
+                </div>
+                <button type="submit">Create Activity</button>
+            </form>
+            <div class="button-group">
+                <button onclick="importActivities()">Upload Activities</button>
+                <button onclick="exportActivities()">Save Activities</button>
+            </div>
+            <h2>Activity List</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Activity ID</th>
+                        <th>Date</th>
+                        <th>Time</th>
+                        <th>Duration</th>
+                        <th>Fee</th>
+                        <th>Max Visitors</th>
+                        <th>Image</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="activityTableBody">
+                    <!-- Activity data will be inserted here dynamically -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="activity_management.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+</body>
+</html>
+
+

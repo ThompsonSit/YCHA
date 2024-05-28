@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Management</title>
+    <link rel="stylesheet" href="usermanagement.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div>
+            <a href="announcements.html">Announcements</a>
+            <a href="usermanagement.html">User Management</a>
+            <a href="announcement_approval.html">Announcement Approval</a>
+            <a href="activity_management.html">Activity Management</a>
+            <a href="activity_approval.html">Activity Approval</a>
+            <a href="facility_management.html">Facility Management</a>
+            <a href="chinese_medicine_booking.html">Chinese Medicine Booking</a>
+            <a href="Report_and_Statistics.html">Report and Statistics</a>
+        </div>
+        <div class="user-info">
+            <p>User1</p>
+            <p>Publisher</p>
+        </div>
+    </div>
+    <div class="main-content">
+        <div class="container">
+            <div class="form-container">
+                <div class="button-group">
+                    <input type="file" id="importFile" accept=".csv" style="display:none" onchange="importCSV(event)">
+                    <button onclick="document.getElementById('importFile').click()">Import CSV</button>
+                    <button onclick="exportCSV()">Export CSV</button>
+                    <button onclick="addRow()">Add Row</button>
+                    <button onclick="saveCSV()">Save</button>
+                </div>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Username</th>
+                        <th>Password</th>
+                        <th>User Address</th>
+                        <th>Phone</th>
+                        <th>User Activities</th>
+                        <th>User Status</th>
+                        <th>Gender</th>
+                        <th>Remarks</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="userTableBody">
+                    <!-- User data will be inserted here dynamically -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="usermanagement.js"></script>
+</body>
+</html>

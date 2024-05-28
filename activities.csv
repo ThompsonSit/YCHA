@@ -1,0 +1,6 @@
+ActivityID,Date,Time,Duration,Fee,MaxVisitors,Image
+Activity1,2023-06-01,10:00,2,10,20,data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUA
+Activity2,2023-06-02,14:00,3,15,25,data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUA
+Activity3,2023-06-03,09:00,1,5,10,data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUA
+Activity4,2023-06-04,11:00,4,20,30,data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUA
+Activity5,2023-06-05,13:00,2.5,12,15,data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUA

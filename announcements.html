@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Announcements</title>
+    <link rel="stylesheet" href="announcements.css">
+</head>
+<body>
+    <div class="sidebar">
+        <div>
+            <a href="announcements.html">Announcements</a>
+            <a href="usermanagement.html">User Management</a>
+            <a href="announcement_approval.html">Announcement Approval</a>
+            <a href="activity_management">Activity Management</a>
+            <a href="activity_approval">Activity Approval</a>
+            <a href="facility_management">Facility Management</a>
+            <a href="chinese_medicine_booking">Chinese Medicine Booking</a>
+            <a href="reports_statistics">Reports/Statistics</a>
+        </div>
+        <div class="user-info">
+            <p>User1</p>
+            <p>Publisher</p>
+        </div>
+    </div>
+    <div class="main-content">
+        <div class="container">
+            <h2>Create New Announcement</h2>
+            <form id="announcementForm">
+                <div class="form-group">
+                    <label for="announcementType">Announcement Type:</label>
+                    <select id="announcementType" name="announcementType" required>
+                        <option value="Weather">Weather</option>
+                        <option value="Activity">Activity</option>
+                        <option value="Medical">Medical</option>
+                        <option value="General">General</option>
+                        <option value="Emergency">Emergency</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="announcementContent">Announcement Content:</label>
+                    <textarea id="announcementContent" name="announcementContent" rows="5" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="announcementImage">Upload Image:</label>
+                    <input type="file" id="announcementImage" name="announcementImage" accept="image/*" required>
+                </div>
+                <button type="submit">Submit Announcement</button>
+            </form>
+        </div>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
